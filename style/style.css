@@ -1,6 +1,6 @@
 body {
   background-color: #333;
-  color:#fff;
+  color: #fff;
   font-family: roboto;
 }
 .container {
@@ -8,11 +8,17 @@ body {
   margin: auto;
 }
 
-.logo{
-  margin: 0 17px 0 0 ;
+.header {
+  background: linear-gradient(180deg, rgba(71, 104, 126, 0.31) 0%, #333 85.62%),
+    url("../img/bg.jpg") no-repeat center top / cover;
+  min-height: 100vh;
 }
 
-.header {
+.logo {
+  margin: 0 17px 0 0;
+}
+
+.navbar {
   display: flex;
   align-items: center;
   padding: 30px 0;
@@ -26,12 +32,12 @@ body {
 }
 
 .menu-item {
-  margin: 0 25px 0 0; 
+  margin: 0 25px 0 0;
 }
 
 .menu-link {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
 
 .user {
@@ -46,3 +52,63 @@ body {
   height: 33px;
   border-radius: 50%;
 }
+
+.film {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.film-info {
+  max-width: 570px;
+}
+
+.film-title-small {
+  font-size: 24px;
+  line-height: 150%;
+  opacity: 0.5;
+}
+
+.film-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  margin-top: 11px;
+  margin-bottom: 23px;
+}
+
+.film-description {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.film-trailer {
+  padding-left: 5px;
+  margin: auto;
+}
+
+.film-details {
+  display: flex;
+  margin-top:  50px;
+}
+
+.film-time {
+margin-right: 35px;
+}
+
+.film-raiting, .film-time {
+  display: flex;
+  align-items: center;
+}
+
+.imdb, .clock{
+  margin-right: 12px;
+}
+
+.rating-strong {
+  font-size: 24px;
+  line-height: 150%;
+}
+
