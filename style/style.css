@@ -16,6 +16,7 @@ body {
   background: linear-gradient(180deg, rgba(71, 104, 126, 0.31) 0%, #333 85.62%),
     url("../img/bg.jpg") no-repeat center top / cover;
   min-height: 100vh;
+
 }
 
 .logo {
@@ -178,7 +179,7 @@ body {
   box-sizing: border-box;
   border-radius: 5px;
   padding: 18px;
-  color:white
+  color: white;
 }
 
 .cinema-select {
@@ -186,10 +187,59 @@ body {
   margin-top: 13px;
 }
 
-.time-select{
+.time-select {
   margin-top: 13px;
 }
 
-.select:focus{
-  color:#333;
+.select:focus {
+  color: #333;
+}
+
+.seats {
+  background: rgba(153, 153, 153, 0.18);
+  border-radius: 10px;
+  height: 686px;
+}
+
+.screen {
+  width: 1018px;
+  border: 10px solid rgba(0, 0, 0, 0.39);
+  margin: 50px auto 0 auto;
+}
+
+.light {
+  margin: 0 auto;
+  display: block;
+
+}
+
+.seats-row-1 {
+  margin:20px auto 0 auto;
+  width: 908.5px;
+  height: 176px;
+}
+
+.seats-row-2 {
+  width: 1024px;
+  height: 176px;
+  margin:55px auto 0 auto;
+}
+
+.seats-row-1 .seat:not(.seat:nth-child(19n)) {
+  margin-right:6px;
+}
+.row {
+  margin-top: 10px;
+}
+
+.row-2-part-left {
+  margin-right: 80px;
+}
+
+.seats-row-2 .seat:not(.seat:nth-child(10n)) {
+margin-right: 6px;;
+}
+
+.seats-row-2 {
+  display: flex;
 }
