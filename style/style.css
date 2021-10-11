@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #333;
   color: #fff;
@@ -58,7 +62,7 @@ body {
   display: flex;
   align-items: center;
   padding-bottom: 60px;
-  border-bottom: 1px solid rgba(255,255,255,0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .film-info {
@@ -91,19 +95,21 @@ body {
 
 .film-details {
   display: flex;
-  margin-top:  50px;
+  margin-top: 50px;
 }
 
 .film-time {
-margin-right: 35px;
+  margin-right: 35px;
 }
 
-.film-raiting, .film-time {
+.film-raiting,
+.film-time {
   display: flex;
   align-items: center;
 }
 
-.imdb, .clock{
+.imdb,
+.clock {
   margin-right: 12px;
 }
 
@@ -112,3 +118,78 @@ margin-right: 35px;
   line-height: 150%;
 }
 
+.session {
+  margin-top: 49px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.session-date-item-block {
+  display: flex;
+  margin-bottom: 64px;
+}
+
+.session-date-item {
+  transition: background-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.session-date-item:hover {
+  background-color: skyblue;
+}
+
+.session-date-label,
+.session-cinema-label,
+.session-time-label {
+  font-size: 16px;
+  line-height: 19px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.month {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.day {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.dayweek {
+  font-size: 19px;
+  line-height: 22px;
+}
+
+.select {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 18px;
+  color:white
+}
+
+.cinema-select {
+  min-width: 470px;
+  margin-top: 13px;
+}
+
+.time-select{
+  margin-top: 13px;
+}
+
+.select:focus{
+  color:#333;
+}
