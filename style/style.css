@@ -16,7 +16,6 @@ body {
   background: linear-gradient(180deg, rgba(71, 104, 126, 0.31) 0%, #333 85.62%),
     url("../img/bg.jpg") no-repeat center top / cover;
   min-height: 100vh;
-
 }
 
 .logo {
@@ -43,8 +42,12 @@ body {
 .menu-link {
   text-decoration: none;
   color: inherit;
+  transition: text-decoration 1s;
 }
 
+.menu-link:hover {
+  text-decoration: underline;
+}
 .user {
   display: flex;
   align-items: center;
@@ -56,6 +59,11 @@ body {
   width: 33px;
   height: 33px;
   border-radius: 50%;
+  transition: transform 1s;
+}
+
+.avatar:hover{
+  transform: rotate(360deg)
 }
 
 .film {
@@ -142,6 +150,7 @@ body {
   text-align: center;
   justify-content: center;
   margin-right: 15px;
+  cursor: pointer;
 }
 
 .session-date-item:hover {
@@ -180,6 +189,7 @@ body {
   border-radius: 5px;
   padding: 18px;
   color: white;
+  cursor: pointer;
 }
 
 .cinema-select {
@@ -195,51 +205,99 @@ body {
   color: #333;
 }
 
-.seats {
-  background: rgba(153, 153, 153, 0.18);
+.scheme {
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  height: 686px;
 }
 
-.screen {
-  width: 1018px;
-  border: 10px solid rgba(0, 0, 0, 0.39);
-  margin: 50px auto 0 auto;
+.scheme rect {
+  fill: rgba(255, 255, 255, 0.2);
 }
 
-.light {
+.scheme path:not(.light) {
+  stroke: rgba(255, 255, 255, 0.2);
+}
+
+.scheme path,
+.scheme rect {
+  cursor: pointer;
+}
+
+.scheme .booked {
+  fill: rgba(255, 255, 255, 0.05);
+  cursor: not-allowed;
+}
+
+.scheme .active {
+  fill: skyblue;
+}
+
+.scheme .seat:not(.booked):hover {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+.legend {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  max-width: 1018px;
   margin: 0 auto;
-  display: block;
-
-}
-
-.seats-row-1 {
-  margin:20px auto 0 auto;
-  width: 908.5px;
-  height: 176px;
-}
-
-.seats-row-2 {
-  width: 1024px;
-  height: 176px;
-  margin:55px auto 0 auto;
-}
-
-.seats-row-1 .seat:not(.seat:nth-child(19n)) {
-  margin-right:6px;
-}
-.row {
-  margin-top: 10px;
-}
-
-.row-2-part-left {
-  margin-right: 80px;
-}
-
-.seats-row-2 .seat:not(.seat:nth-child(10n)) {
-margin-right: 6px;;
-}
-
-.seats-row-2 {
   display: flex;
+  align-items: center;
+  padding-top: 22px;
+  padding-bottom: 36px;
+}
+
+.legend svg {
+  margin-right: 15px;
+}
+
+.legend-active svg rect {
+  fill: skyblue;
+}
+
+.legend-booked svg rect {
+  fill: rgba(255, 255, 255, 0.05);
+}
+
+.legend-label {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.checkout {
+  display: flex;
+  align-items: center;
+  margin-top: 64px;
+  margin-bottom: 40px;
+  justify-content: space-between;
+}
+
+.total-price-label {
+  display: block;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 12px;
+}
+
+.total-price-count,
+.currency {
+  font-size: 52px;
+  line-height: 61px;
+}
+
+.checkout-button {
+  display: inline;
+  background-color: rgba(135, 206, 235, 0.7);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  padding: 24px 52px;
+  transition: background-color 0.2s;
+}
+
+.checkout-button:hover {
+  background-color: rgba(135, 206, 235);
 }
