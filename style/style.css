@@ -210,7 +210,7 @@ body {
   border-radius: 10px;
 }
 
-.scheme rect {
+.seat {
   fill: rgba(255, 255, 255, 0.2);
 }
 
@@ -228,11 +228,11 @@ body {
   cursor: not-allowed;
 }
 
-.scheme .active {
+.active {
   fill: skyblue;
 }
 
-.scheme .seat:not(.booked):hover {
+.scheme .seat:not(.booked):not(.active):hover {
   fill: rgba(255, 255, 255, 0.5);
 }
 
@@ -262,6 +262,7 @@ body {
   display: flex;
   align-items: center;
   margin-right: 30px;
+  color:rgba(255, 255, 255, 0.5)
 }
 
 .checkout {
