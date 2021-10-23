@@ -10,12 +10,13 @@ body {
 .container {
   max-width: 1170px;
   margin: auto;
+  width: 90%;
 }
 
 .header {
   background: linear-gradient(180deg, rgba(71, 104, 126, 0.31) 0%, #333 85.62%),
     url("../img/bg.jpg") no-repeat center top / cover;
-  min-height: 100vh;
+  padding-bottom: 60px;
 }
 
 .logo {
@@ -33,6 +34,12 @@ body {
   list-style: none;
   display: flex;
   margin: 0;
+}
+
+.m-menu {
+  background-color: transparent;
+  border: none;
+  display: none;
 }
 
 .menu-item {
@@ -62,8 +69,8 @@ body {
   transition: transform 1s;
 }
 
-.avatar:hover{
-  transform: rotate(360deg)
+.avatar:hover {
+  transform: rotate(360deg);
 }
 
 .film {
@@ -193,7 +200,7 @@ body {
 }
 
 .cinema-select {
-  min-width: 470px;
+  width: 470px;
   margin-top: 13px;
 }
 
@@ -208,6 +215,10 @@ body {
 .scheme {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+}
+
+.scheme-svg {
+  max-width: 1170;
 }
 
 .seat {
@@ -262,7 +273,7 @@ body {
   display: flex;
   align-items: center;
   margin-right: 30px;
-  color:rgba(255, 255, 255, 0.5)
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .checkout {
@@ -302,3 +313,126 @@ body {
 .checkout-button:hover {
   background-color: rgba(135, 206, 235);
 }
+
+@media (max-width: 1190px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .cinema-select {
+    width: 100%;
+  }
+
+  .legend {
+    width: 90%;
+  }
+}
+
+@media (max-width: 996px) {
+
+  .container {
+    max-width: 768px;
+
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .m-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 796px) {
+
+  .container {
+    max-width: 568px;
+
+  }
+  .cinema-select {
+    width: 70%;
+    margin-bottom: 60px;
+  }
+
+  .session {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .film {
+    flex-direction: column;
+  }
+
+  .film-trailer {
+    margin-top: 10px;
+  }
+
+  .legend {
+    justify-content: center ;
+  }
+
+  .legend-free, .legend-active, .legend-booked {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .legend-free-label, .legend-active-label, .legend-booked-label {
+    margin-top: 10px;
+  }
+
+  .session-date-item {
+    padding: 5px;
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+  }
+  
+  
+  .session-date-label,
+  .session-cinema-label,
+  .session-time-label {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  
+  .month {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  
+  .day {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  
+  .weekday {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .session {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .checkout {
+    flex-direction: column;
+  }
+
+  .total-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+    margin-bottom: 10px;
+  }
+   
+}
+
+
+
